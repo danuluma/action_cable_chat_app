@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+message_adder = function(message){
+  $('#messages-table').append(message);
+}
+
+$(document).on('turbolinks:load', function() {
+  message_adder("Hey Dan")
+});
